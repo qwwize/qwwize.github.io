@@ -14,9 +14,14 @@
     <main class="content">
       <section class="result">
         <div class="result__video-container">
-          <video src="" controls class="result__video" poster=""></video>
+          <video
+            src=""
+            controls
+            class="result__video"
+            poster=""
+          ></video>
         </div>
-        <form class="search-form">
+        <form class="search-form" name="search-form" novalidate>
           <fieldset class="search-form__fieldset">
             <h2 class="search-form__fieldset-title">Город</h2>
             <label class="search-form__label">
@@ -26,6 +31,7 @@
                 placeholder="Санкт Петербург, например"
                 name="city"
                 class="search-form__textfield"
+                required
               />
             </label>
           </fieldset>
@@ -73,7 +79,7 @@
         <h1 class="title">
           <span class="content__accent">По-</span><br />смотри<br />в окно
         </h1>
-        <div class="content__list-container">
+        <div class="content__list-container custom-scrollbar">
           <ul class="content__list">
             <!-- ЗДЕСЬ ОКАЖУТСЯ ТЕМПЛЕЙТЫ КАРТОЧЕК -->
           </ul>
@@ -98,15 +104,22 @@
       <li class="content__list-item">
         <a href="#0" class="content__card-link">
           <article class="content__video-card">
+            <img
+              src=""
+              alt="Превью видео"
+              class="content__video-card-thumbnail"
+            />
             <div class="content__video-card-description-container">
-              <h2 class="content__video-card-title"></h2>
-              <p class="content__video-card-description"></p>
+              <h2 class="content__video-card-title">Название видео</h2>
+              <p class="content__video-card-description">
+                Короткое описание видео. Этот текст обрежется при переполнении.
+              </p>
             </div>
-            <img src="" alt="" class="content__video-card-thumbnail" />
           </article>
         </a>
       </li>
     </template>
+
     <template class="more-button-template">
       <button class="button more-button">Показать еще</button>
     </template>
@@ -116,6 +129,7 @@
         <h2 class="error__title">Из этого города нет видео :(</h2>
       </div>
     </template>
+
     <script src="./scripts/script.js"></script>
   </body>
 </html>
