@@ -9,6 +9,10 @@ html {
 }
 
 .page {
+  display: flex; /* выравниваем контент по центру окна */
+  justify-content: center;
+  align-items: center;
+
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -16,6 +20,29 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+}
+
+.content{
+  display: grid; /* задаём сетку */
+  grid-template-columns: 711px 399px; /* размеры как в макете */
+  column-gap: 30px; /* отступ между колонками */
+  align-items: end; /* прижимаем элементы к нижней границе */
+}
+/* Левая часть (видео + форма) */
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  inline-size: 711px;
+}
+
+/* Правая часть (заголовок + карточки) */
+.content__details {
+  display: flex;
+  flex-direction: column;
+  inline-size: 399px;
+  block-size: 100%;
+  justify-content: start;
 }
 
 h1,
